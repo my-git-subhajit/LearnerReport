@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: learnerreportfrontend-service
+spec:
+  selector:
+    app: learnerreportfrontend
+  ports:
+  - port: 3000
+    targetPort: 3000

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+
+kind: Deployment
+metadata:
+  name: learnerreportfrontend-deployment
+spec:
+  selector:
+    matchLabels:
+      app: learnerreportfrontend
+  template:
+    metadata:
+      labels:
+        app: learnerreportfrontend
+    spec:
+      containers:
+      - name: learnerreportfrontend
+        image: iamgood1989/learnerreportfrontend:v1
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
